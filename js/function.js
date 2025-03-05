@@ -30,6 +30,32 @@ function check(data){
 
 }
 
+function logRegister(type,amount){
+
+    const d = new Date();
+
+    const arr = {
+        'noa-bal':'for Flood at Noakhali, Bangladesh',
+        'feni-bal': 'for Flood Relief in Feni,Bangladesh',
+        'quo-bal' : 'for Injured in the Quota Movement'
+    }
+
+    const newDonation = `
+    <div class="border-2 rounded-xl p-2">
+                <h1 class="text-lg font-bold pt-1">
+                ${amount} TK has been Donated ${arr[type]}
+                </h1>
+                <br>
+                <p class="pt-2">
+                  ${d}  
+                </p>
+            </div>
+    `;
+
+    document.getElementById('history').innerHTML += newDonation;
+
+}
+
 function update(label_id,new_bal,amount){
     document.getElementById(label_id).innerText = new_bal;
 
@@ -39,10 +65,14 @@ function update(label_id,new_bal,amount){
 
     document.getElementById('modal-val').innerText = amount + 'TK';
 
+    logRegister(label_id,amount);
+
     document.getElementById('my_modal_2').showModal();
 
     return true;
 }
+
+
 
 // Noakhali Flood
 document.getElementById('noa-btn').addEventListener('click',function(){
