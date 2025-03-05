@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Donation Web</title>
+
+    <!-- Font adding -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font added -->
+
+     <!-- Tailwind CSS Head intigration -->
+     <script src="https://cdn.tailwindcss.com"></script>
+
+     <script>
+         tailwind.config = {
+           theme: {
+             extend: {
+               colors: {
+                 test: '#FF00FF',
+               },
+               fontFamily: {
+                 lexend: ["Lexend", "sans-serif"],
+               },
+             },
+           },
+         }
+       </script>
+ 
+       <!-- Tailwind Intigration End -->
+ 
+       <!-- Daisy UI Intigration -->
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+       <!-- Daisy UI End -->
+ 
+</head>
+
+<body class="font-lexend">
+
+    <nav class="w-full sticky top-0 z-10 backdrop-blur-xl">
+        <div class="lg:navbar shadow-sm bg-purple-900 bg-opacity-5 max-lg:min-h-8">
+            <div class="container mx-auto flex justify-between md:p-3 max-md:p-2">
+                <div>
+                    <a class="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl" href="/blog.html">blog</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="/index.html"><img src="/assets/logo.png" alt="" srcset="" class="max-w-6 lg:max-w-full"></a>
+                    <h2 class="font-semibold xl:text-xl max-md:hidden md:text-xs">Donate Bangladesh</h2>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <img src="/assets/coin.png" alt="" srcset="" class="max-w-4 lg:max-w-full">
+                    <h3 id="balance" class="font-semibold">15000</h3>
+                </div>
+            </div>
+          </div>
+
+        <div class="but_section mx-auto container flex justify-center py-2 lg:py-8 gap-5">
+            <button id="don-btn" class="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Donation</button>
+
+            <button id="his-btn" class="btn btn-active btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">History</button>
+        </div>
+    </nav>
+
+
+    <main>
+        <section>
+            <section class="bg-white w-full py-10 md:py-24 max-w-screen-xl mx-auto px-4" id="faq">
+
+                <section class="container max-w-screen-xl mx-auto px-10 place-items-center py-6">
+      
+                  <div class="sec-head py-2">
+                    <h2 class="text-5xl max-md:text-3xl max-sm:text-2xl font-bold font-lexend text-title_col leading-tight tracking-tighter max-lg:text-center">
+                      Frequently Asked Questions
+                    </h2>
+                  </div>
+      
+                  
+                </section>
+      
+                <!-- 2 Row FAQ Questions -->
+      
+                <section class="mt-5">
+      
+                  <div class="max-w-screen-lg p-6 mx-auto">
+      
+                    <div class="collapse collapse-plus bg-base-200 my-3">
+                      <input type="radio" name="my-accordion-3" checked="checked" />
+                      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM) ?</div>
+                      <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document (such as an HTML or XML document) as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, and text. The DOM provides a way for programs to manipulate the structure, style, and content of web documents dynamically.</p>
+                      </div>
+                    </div>
+      
+                    <div class="collapse collapse-plus bg-base-200 mb-3">
+                      <input type="radio" name="my-accordion-3" />
+                      <div class="collapse-title text-xl font-medium">how do you select an element from the DOM?</div>
+                      <div class="collapse-content">
+                        <p>In the Document Object Model (DOM), We can select elements using various methods provided by JavaScript. These methods allow to access and manipulate elements based on their ID, class name, tag name, CSS selectors, and query selector.</p>
+                      </div>
+                    </div>
+      
+                    <div class="collapse collapse-plus bg-base-200">
+                      <input type="radio" name="my-accordion-3" />
+                      <div class="collapse-title text-xl font-medium">what is delegation in the context of the DOM, and why is it useful?</div>
+                      <div class="collapse-content">
+                        <p>Event delegation is a technique in the DOM (Document Object Model) where you delegate the handling of events to a parent element rather than attaching event listeners to individual child elements. This approach leverages the bubbling phase of event propagation in the DOM, where events triggered on a child element "bubble up" to its ancestors.</p>
+                      </div>
+                    </div>
+      
+                    <div class="collapse collapse-plus bg-base-200 my-3">
+                      <input type="radio" name="my-accordion-3" checked="checked" />
+                      <div class="collapse-title text-xl font-medium">how do you manipulate an elements attributes and styles using DOM?</div>
+                      <div class="collapse-content">
+                        <p>Manipulating an element's attributes and styles is a common task in web development using the DOM (Document Object Model). JavaScript provides several methods and properties to achieve this.We can use getAttribute(), setAttribute(), removeAttribute(), hasAttribute() etc. And for style we can use element.style.cssText where cssText is the css keyword that we use in CSS file but need to write in camel case for then assign corresponding value to change the style.</p>
+                      </div>
+                    </div>
+        
+      
+                  </div>
+                  
+                </section>
+      
+             </section>
+        </section>
+    </main>
+</body>
+
